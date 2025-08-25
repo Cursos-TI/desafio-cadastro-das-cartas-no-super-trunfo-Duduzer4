@@ -11,7 +11,7 @@ int main() {
     char codigo1[20], codigo2[20];
     char cidade1[20], cidade2[20];
     int populacao1, populacao2, turistico1, turistico2;
-    float area1, area2, pib1, pib2;
+    float area1, area2, pib1, pib2, densidade1, densidade2, pibp1, pibp2;
 
 
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
@@ -51,6 +51,13 @@ int main() {
     printf("Turistico da Cidade");
     scanf("%d" , &turistico2);
 
+    densidade1 = (float) (populacao1 / area1);
+    densidade2 = (float) (populacao2 / area2);
+    pibp1 = (float) (pib1 / populacao1);
+    pibp1 = (float) (pib2 / populacao2);
+
+
+
     printf("carta 01\n:");
 
     printf("Estado1 : %c\n", estado1);
@@ -59,6 +66,8 @@ int main() {
     printf("Populacao1 : %d - Turistico1: %d\n", populacao1, turistico1);
     printf("Area1 : %f\n", area1);
     printf("Pib1 : %f\n", pib1);
+    printf("Densidade Populacional1 : %f\n", densidade1);
+    printf("Pib Percapita1 : %f\n", pibp1);
 
     printf("carta 02\n:");
 
@@ -68,8 +77,9 @@ int main() {
     printf("Populacao2: %d - Turistico2: %d\n", populacao2, turistico2);
     printf("Area2: %f\n", area2);
     printf("Pib2: %f\n", pib2);
+    printf("Densidade Populacional2 : %f\n", densidade2);
+    printf("Pib Percapita2 : %f\n", pibp2);
     
-
         
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
